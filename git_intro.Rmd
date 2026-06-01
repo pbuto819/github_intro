@@ -1,0 +1,98 @@
+---
+title: "Intro To Git"
+author: "Peter T. Buto"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+<style>
+div.footnotes {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 0.6em;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+
+  $('footnote').each(function(index) {
+    var text  = $(this).html();
+    var fnNum = (index+1).toString();
+    $(this).html(fnNum.sup());
+
+    var footnote   = fnNum + '. ' + text + '<br/>';
+    var oldContent = $(this).parents('slide').children('div.footnotes').html();
+    var newContent = oldContent + footnote;
+    $(this).parents('slide').children('div.footnotes').html(newContent);
+  });
+});
+</script>
+
+## What is Git? Github?
+
+- "Git is a free and open source distributed version control system"
+  - Version Control: 
+  - Fast, popular, free and open source
+- Github is a host website that stores and shares projects
+
+## Why Use GitHub?<footnote>You can use *git* completely locally</footnote>
+  
+- Github provides a more user-friendly interface that avoids the command line
+  - Track Changes
+  - Collaborate
+  - Check for Reproducibility  
+
+## Vocabulary
+
+- `repository`:  ("repo") A folder containing your project 
+- `branch`: a line of development
+- `master branch`: the default development branch or "template code" 
+- `pull`: Finds out what is missing from the master branch and merge it locally
+- `commit`: (noun) a "snapshot" of the current state of code 
+- `commit`: (verb) storing the "snapshot" on the project timeline
+- `clone`:
+
+## Workflow
+
+- Create a repository
+- Write Code
+- Commit
+- Push to Repository 
+
+## Walkthrough
+
+## Try on your own
+
+- Go to https://github.com/pbuto819/github_intro 
+- Code >> Open with GitHub Desktop
+- Make some change: 
+  - Make a new folder with your name in it
+  - locally add a code/text file saying "hi"
+
+## Branching
+
+- We can create sub-folders and with personalized versions of scripts when projects are sufficiently different
+- Branching is another way to collaborate on projects 
+  - branching creates a staging area to develop code
+    - this allows others to work off the original template code
+  - once you're done you can merge the branch into the main branch
+    - others can then use the updated template code
+  - Git will check to see if there are any major conflicts between what your changes and any other changes collaborators may have pushed while you were working. 
+
+## Other points
+
+- Because we work with sensitive data, we should never save data on github
+  - you can use a `.gitignore` file to explicitly exclude certain file types
+    - e.g. `.csv`, `.RDS`, etc. 
+
+## Bibliography
+
+- [epirhandbook](https://www.epirhandbook.com/en/)
+- [r4epi](https://www.r4epi.com/)
+- [git website](https://git-scm.com/)
+
