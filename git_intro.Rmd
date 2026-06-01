@@ -55,11 +55,11 @@ $(document).ready(function() {
 - `pull`: Finds out what is missing from the master branch and merge it locally
 - `commit`: (noun) a "snapshot" of the current state of code 
 - `commit`: (verb) storing the "snapshot" on the project timeline
-- `clone`:
+- `clone`: Create a complete local copy of some online repository
 
 ## Workflow
 
-- Create a repository
+- Create/clone a repository
 - Write Code
 - Commit
 - Push to Repository 
@@ -89,6 +89,10 @@ $(document).ready(function() {
 - Because we work with sensitive data, we should never save data on github
   - you can use a `.gitignore` file to explicitly exclude certain file types
     - e.g. `.csv`, `.RDS`, etc. 
+    
+## MAKE SOME CHANGE
+
+- sample text
 
 ## Bibliography
 
